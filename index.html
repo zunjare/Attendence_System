@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Attendance System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>JSPM'S Rajarshi Shahu College of Engineering,Pune</h2>
+      <h1>Lecture Attendance Management</h1>
+    </header>
+
+    <div class="input-section">
+      <input type="text" id="studentName" placeholder="Enter Student Name" />
+      <input type="number" id="totalLectures" placeholder="Total Lectures" min="1" />
+      <button onclick="addStudent()">Add Student</button>
+    </div>
+
+    <table id="attendanceTable">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Lecture</th>
+          <th>Status</th>
+          <th>Present</th>
+          <th>Absent</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Dynamic rows go here -->
+      </tbody>
+    </table>
+  </div>
+  <div class="report-section">
+    <button onclick="generateReport()">Generate Report</button>
+  
+    <h2>Attendance Summary</h2>
+    <table id="reportTable">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Total Lectures</th>
+          <th>Present</th>
+          <th>Absent</th>
+        </tr>
+      </thead>
+      <tbody id="reportBody">
+        <!-- Summary goes here -->
+      </tbody>
+    </table>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
